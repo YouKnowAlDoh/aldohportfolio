@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
     <nav class="navbar">
       <ul>
         <li><a href="#about">About</a></li>
@@ -15,31 +17,39 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="container">
-        <img src="https://i.insider.com/6734ec11ede4eeae39273b66?width=800&format=jpeg" alt="Your Avatar" class="avatar"/>
-        <h1>Hi, I'm Al!</h1>
-        <p>Welcome to my first GitHub website. I'm learning web development, crypto trading, and always hustling for that next level.</p>
-        <a href="https://github.com/YouKnowAlDohE" target="_blank" class="btn">GitHub</a>
-    </div>
+  </header>
 
-    <section id="about">
+  <main id="main">
+    <section class="hero container">
+      <img src="https://i.insider.com/6734ec11ede4eeae39273b66?width=800&format=jpeg" alt="Al's avatar" class="avatar">
+      <h1>Hi, I'm Al!</h1>
+      <p>Welcome to my portfolio where I share my journey in web development, crypto trading, and creative projects.</p>
+      <a href="https://github.com/YouKnowAlDohE" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
+    </section>
+
+    <section id="about" class="container">
       <h2>About Me</h2>
-      <p>I’m Al, learning full stack web dev and crypto. Hustle never stops!</p>
+      <p>I’m Al, a budding full-stack developer and crypto enthusiast. I thrive on learning new technologies and building innovative tools.</p>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="container">
       <h2>Projects</h2>
-      <p>Coming soon: my portfolio projects.</p>
+      <p>Coming soon: a showcase of my projects, from web apps to blockchain tools.</p>
     </section>
 
-    <section id="blog">
+    <section id="blog" class="container">
       <h2>Blog</h2>
-      <p>Coming soon: technical articles and trading stories.</p>
+      <p>Coming soon: technical articles, trading insights, and dev tutorials.</p>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="container">
       <h2>Contact</h2>
-      <p>Contact form coming soon.</p>
+      <p>Stay tuned: I'll add a contact form here so you can reach out.</p>
     </section>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 Al. All rights reserved.</p>
+  </footer>
 </body>
 </html>
