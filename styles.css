@@ -1,84 +1,151 @@
-body {
-    background: #171717;
-    color: #f3f3f3;
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    min-height: 100vh;
-    padding-top: 60px; /* offset for fixed navbar */
+/* ========================================
+   styles.css - Modern, Accessible, Responsive
+   ======================================== */
+
+:root {
+  --bg-color: #171717;
+  --fg-color: #f3f3f3;
+  --card-bg: #23272f;
+  --accent: #38b6ff;
+  --accent-dark: #2384ba;
 }
 
-.navbar {
-    background: #23272f;
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 999;
+/* Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-top: 60px; /* offset for fixed navbar */
+}
+
+/* Skip-link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 1rem;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.5rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header & Navbar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
 }
 .navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
 }
-.navbar ul li a {
-    color: #f3f3f3;
-    text-decoration: none;
-    font-weight: bold;
+.navbar a {
+  color: var(--fg-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
 }
-.navbar ul li a:hover {
-    color: #38b6ff;
+.navbar a:hover,
+.navbar a:focus {
+  color: var(--accent);
+  outline: none;
 }
 
+/* Main Content Containers */
 .container {
-    background: #23272f;
-    padding: 2rem 2.5rem;
-    border-radius: 1.5rem;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    text-align: center;
-    max-width: 350px;
-    margin: 2rem auto;
+  background-color: var(--card-bg);
+  margin: 2rem auto;
+  max-width: 350px;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
+
 .avatar {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
 }
+
 h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 p {
-    font-size: 1.05rem;
-    margin-bottom: 1.5rem;
-}
-.btn {
-    display: inline-block;
-    background: #38b6ff;
-    color: #fff;
-    padding: 0.7rem 1.4rem;
-    border-radius: 0.7rem;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.2s;
-}
-.btn:hover {
-    background: #2384ba;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Section styling */
+.btn {
+  background-color: var(--accent);
+  color: #fff;
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.7rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-dark);
+  outline: none;
+}
+
+/* Section Styling */
 section {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: #23272f;
-    border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background-color: var(--card-bg);
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 section h2 {
-    margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: var(--fg-color);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .container,
+  section {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
 }
